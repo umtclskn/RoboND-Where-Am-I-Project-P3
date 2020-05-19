@@ -152,6 +152,34 @@ negate: 0
 Note that the origin of the map should correspond to your map's size. For example, the default map size is 30 by 30, so the origin will be [-15, -15, 0], i.e. half the size of the map.
 
 
+# Teleop Package
+
+If you prefer to control your robot to help it localize itself as you did in the lab, you would need to add the  `teleop`  node to your package. Thanks to the ROS community, we could use  `ros-teleop`  package to send command to the robot using keyboard or controller.
+
+Clone the  `ros-teleop`  package to your  `src`  folder:
+
+```
+cd /home/workspace/catkin_ws/src
+git clone https://github.com/ros-teleop/teleop_twist_keyboard
+
+```
+
+Build the package and source the setup script:
+
+```
+cd ..
+catkin_make
+source devel/setup.bash
+
+```
+
+Now you could run the  `teleop`  script as is described in the  `README`  file:
+
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+
 # Project  Directory Structure
 ```
         .[RoboND-Where-Am-I-Project-P3]            # Where Am I Project
